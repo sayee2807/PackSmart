@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install torch CPU separately first
-RUN pip install --no-cache-dir torch==2.9.0 torchvision==0.24.0 \
-    --index-url https://download.pytorch.org/whl/cpu
+RUN pip install --no-cache-dir torch==2.9.0 torchvision==0.24.0
 
 # Install rest of dependencies
 COPY requirements.txt .
